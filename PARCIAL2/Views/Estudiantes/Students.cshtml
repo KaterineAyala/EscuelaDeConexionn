@@ -1,0 +1,20 @@
+﻿@model EscuelaDeConexionn.Models.Erollements
+@{
+    ViewBag.Title = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Students</h2>
+
+<a></a>
+<form action="home" method="post"></form>
+
+@using (Html.BeginForm("getcombo", "home", FormMethod.Post))
+
+{
+
+    @Html.DropDownListFor(a => a.StudentID, new SelectList(ViewBag.listofstudentcombobox, "Value", "Text"), "Sleciona un estudiante", new { @class = "form-control" })
+
+    <input type="submit" />
+
+}
